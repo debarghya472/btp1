@@ -17,6 +17,24 @@ cors = CORS(app)
 
 model = pickle.load(open('./model.pkl', 'rb'))
 
+# def resizeGrayCenter(img):
+#     print(type(img))
+#     img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+#     img = cv2.resize(img, (600, 300), interpolation = cv2.INTER_AREA)
+#     img = img - img.mean()
+#     return img
+
+
+# def sampleimage():
+
+#     simg=cv2.imread("C:/Users/adhyansh/currency detection/2kd1.jpg")
+#     sampleimg=[]
+
+#     # simg = resizeGrayCenter(simg)
+#     # cv2.imshow('img',simg)
+#     # cv2.waitKey(0)
+#     sampleimg.append((np.var(simg),skew(simg,axis=None),kurtosis(simg,axis=None),skimage.measure.shannon_entropy(simg)))
+#     return sampleimg[0]
 
 @app.route('/predict', methods=['GET', 'POST'])
 def predict():
