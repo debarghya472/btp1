@@ -1,8 +1,9 @@
-from flask import Flask, jsonify, request
-import json
+
+from flask import Flask, request
 from flask_cors import CORS, cross_origin
 
 import os
+import json
 import pickle
 import cv2
 import numpy as np
