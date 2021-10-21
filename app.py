@@ -18,7 +18,7 @@ app = Flask(__name__)
 
 cors = CORS(app)
 
-model=pickle.load(open('c:/Users/adhyansh/Desktop/web demo/final_Demo/final/api/model.pkl','rb'))
+model=pickle.load(open('c:/Users/adhyansh/Desktop/web demo/final_Demo/final/model.pkl','rb'))
 
 @app.after_request
 # def resizeGrayCenter(img):
